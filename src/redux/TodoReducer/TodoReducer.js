@@ -1,4 +1,4 @@
-import {DELETE_TODO, GET_TODO} from "../type";
+import {ADD_TODO, DELETE_TODO, GET_TODO} from "../type";
 
 const initialState = {
     todos: []
@@ -10,6 +10,11 @@ export const todoReducer = (state = initialState, action) => {
             return {
               ...state,
                 todos: action.payload
+            }
+        case ADD_TODO:
+            return {
+             ...state,
+               todos: [...state.todos, action.payload]
             }
         case DELETE_TODO:
             return {
