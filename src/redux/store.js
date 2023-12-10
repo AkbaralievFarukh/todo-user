@@ -4,12 +4,11 @@ import {todoReducer} from "./TodoReducer/TodoReducer";
 import thunk from "redux-thunk";
 import {userReducer} from "./UserReducer/UserReducer";
 
-const rootReducer = combineReducers({
-    todoReducer,
-    userReducer,
-})
 
 export const store = createStore(
-    rootReducer,
+    combineReducers({
+        todo: todoReducer,
+        user: userReducer
+    }),
     composeWithDevTools(applyMiddleware(thunk))
 )

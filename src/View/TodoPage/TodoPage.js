@@ -1,14 +1,17 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import TodoItem from "../../Copmonents/TodoItem/TodoItem";
 import {useDispatch, useSelector} from "react-redux";
 import {addTodo, getTodos} from "../../redux/Actions/TodoAction";
 
 const TodoPage = () => {
     const dispatch = useDispatch();
-    const todos = useSelector(state => state.todos);
+    const todos = useSelector(state => state.todo.todos);
+    const [editTodo, setEditTodo] = useState('')
 
     const handleAddTodo = () => {
-        dispatch(addTodo())
+        const newTodo = {title: editTodo, isCompleted: false}
+        dispatch(addTodo(newTodo))
+        setEditTodo('')
     }
 
     useEffect(() => {
@@ -16,8 +19,12 @@ const TodoPage = () => {
     }, [dispatch])
     return (
         <div className={"container"}>
-            <div>
-                <input type={"text"} onChange={(e) => e.target.value} />
+            <div className={"add-todo"}>
+                <input
+                    type={"text"}
+                    value={editTodo}
+                    onChange={(e) => setEditTodo(e.target.value)}
+                />
                 <button onClick={handleAddTodo}>Add</button>
             </div>
             <div className={"todo-wrapper"}>

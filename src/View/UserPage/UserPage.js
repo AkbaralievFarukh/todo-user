@@ -5,17 +5,19 @@ import UserItem from "../../Copmonents/UserItem/UserItem";
 
 const UserPage = () => {
     const dispatch = useDispatch();
-    const users = useSelector(state => state.users);
+    const users = useSelector(state => state.user.users);
     useEffect(() => {
         dispatch(getUser())
     }, [dispatch])
     return (
         <div className={"container"}>
-            {
-                users.map((user) => (
-                    <UserItem key={user.id} user={user} />
-                ))
-            }
+            <div className={"row"}>
+                {
+                    users.map((user) => (
+                        <UserItem key={user.id} user={user} />
+                    ))
+                }
+            </div>
         </div>
     );
 };

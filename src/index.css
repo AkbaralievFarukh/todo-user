@@ -17,3 +17,66 @@ code {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-4 {
+  width: 33.33333333%;
+}
+
+.box {
+  padding: 15px;
+  text-align: center;
+}
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  gap: 200px;
+}
+
+.home-page a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid black;
+  padding: 50px 300px;
+}
+
+.home-page a:hover {
+  color: white;
+  background-color: black;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-todo input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.add-todo button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border: 2px solid black;
+  background: transparent;
+  cursor: pointer;
+}

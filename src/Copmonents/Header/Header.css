@@ -10,3 +10,17 @@ a {
     align-items: center;
     gap: 20px;
 }
+
+.header-wrapper a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.header-wrapper a:hover {
+
+}
