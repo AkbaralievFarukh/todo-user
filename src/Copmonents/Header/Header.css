@@ -22,5 +22,6 @@ a {
 }
 
 .header-wrapper a:hover {
-
+    color: white;
+    background-color: black;
 }
