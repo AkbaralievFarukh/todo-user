@@ -2,13 +2,29 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     text-transform: capitalize;
-    padding: 10px;
+    padding: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     margin-bottom: 10px;
     &:hover {
         background-color: rgba(0, 0, 0, 0.05);
     }
+}
+
+.todo-item button {
+    width: 100px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.todo-item button:hover {
+    color: white;
+    background: black;
 }
