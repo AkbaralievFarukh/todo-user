@@ -6,12 +6,12 @@ import {addTodo, getTodos} from "../../redux/Actions/TodoAction";
 const TodoPage = () => {
     const dispatch = useDispatch();
     const todos = useSelector(state => state.todo.todos);
-    const [editTodo, setEditTodo] = useState('')
+    const [newTitleTodo, setNewTitleTodo] = useState('')
 
     const handleAddTodo = () => {
-        const newTodo = {title: editTodo, isCompleted: false}
+        const newTodo = {title: newTitleTodo, isCompleted: false}
         dispatch(addTodo(newTodo))
-        setEditTodo('')
+        setNewTitleTodo('')
     }
 
     useEffect(() => {
@@ -22,8 +22,8 @@ const TodoPage = () => {
             <div className={"add-todo"}>
                 <input
                     type={"text"}
-                    value={editTodo}
-                    onChange={(e) => setEditTodo(e.target.value)}
+                    value={newTitleTodo}
+                    onChange={(e) => setNewTitleTodo(e.target.value)}
                 />
                 <button onClick={handleAddTodo}>Add</button>
             </div>
