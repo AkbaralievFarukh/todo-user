@@ -29,10 +29,8 @@ img {
 }
 
 .row {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
 }
 
 .col-4 {
@@ -49,11 +47,10 @@ img {
 
 .home-page {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 80vh;
-  gap: 200px;
+  align-items: center;
+  margin-top: 200px;
+  gap: 50px;
 }
 
 .home-page a {
@@ -91,4 +88,31 @@ img {
   border: 2px solid black;
   background: transparent;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  .home-page a {
+    padding: 50px 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home-page a {
+    padding: 25px 100px;
+  }
+  .col-4 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-wrapper a {
+    padding: 5px 10px!important;
+  }
+  .col-4 {
+    width: 100%;
+  }
 }
