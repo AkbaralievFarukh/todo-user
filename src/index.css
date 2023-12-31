@@ -18,6 +18,10 @@ code {
     monospace;
 }
 
+img {
+  width: 100%;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -39,7 +43,8 @@ code {
 .box {
   text-align: center;
   border: 2px solid black;
-  padding: 15px 0;
+  padding: 15px;
+  height: 100%;
 }
 
 .home-page {
